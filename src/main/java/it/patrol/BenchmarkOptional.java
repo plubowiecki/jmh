@@ -35,8 +35,8 @@ public class BenchmarkOptional {
 	@Benchmark
 	public String testStaticMethodNullArgument(NullObject nullObject) {
 		if (Objects.nonNull(nullObject) &&
-				Objects.nonNull(nullObject.getTestObject()) &&
-				Objects.nonNull(nullObject.getTestObject().getValue())) {
+			Objects.nonNull(nullObject.getTestObject()) &&
+			Objects.nonNull(nullObject.getTestObject().getValue())) {
 			return nullObject.getTestObject().getValue();
 		}
 		return "";
@@ -45,8 +45,8 @@ public class BenchmarkOptional {
 	@Benchmark
 	public String testEqualNullArgument(NullObject nullObject) {
 		if (nullObject != null &&
-				nullObject.getTestObject() != null &&
-				nullObject.getTestObject().getValue() != null) {
+			nullObject.getTestObject() != null &&
+			nullObject.getTestObject().getValue() != null) {
 			return nullObject.getTestObject().getValue();
 		}
 		return "";
@@ -63,8 +63,8 @@ public class BenchmarkOptional {
 	@Benchmark
 	public String testStaticMethodNotNullArgument(NotNullObject notNullObject) {
 		if (Objects.nonNull(notNullObject) &&
-				Objects.nonNull(notNullObject.getTestObject()) &&
-				Objects.nonNull(notNullObject.getTestObject().getValue())) {
+			Objects.nonNull(notNullObject.getTestObject()) &&
+			Objects.nonNull(notNullObject.getTestObject().getValue())) {
 			return notNullObject.getTestObject().getValue();
 		}
 		return "";
@@ -73,8 +73,8 @@ public class BenchmarkOptional {
 	@Benchmark
 	public String testEqualNotNullArgument(NotNullObject notNullObject) {
 		if (notNullObject != null &&
-				notNullObject.getTestObject() != null &&
-				notNullObject.getTestObject().getValue() != null) {
+			notNullObject.getTestObject() != null &&
+			notNullObject.getTestObject().getValue() != null) {
 			return notNullObject.getTestObject().getValue();
 		}
 		return "";
